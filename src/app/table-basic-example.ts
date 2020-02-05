@@ -1,25 +1,5 @@
 import {Component} from '@angular/core';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
-
 /**
  * @title Basic use of `<table mat-table>`
  */
@@ -29,8 +9,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: 'table-basic-example.html',
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['name', 'save_count', 'engagement'];
+  dataSource = [
+    { display_url: 'https://scontent.frec7-1.fna.fbcdn.net/v/t51.2885-15/c160.0.640.640a/p640x640/75208808_561031921125059_2827147306306796635_n.jpg?_nc_cat=108&_nc_ohc=5hVzmIZluX0AX-tNVc7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.frec7-1.fna&oh=751561df44fcf38c9f3d8cf7e97b417a&oe=5ED12312', metric: { save_count: 12, engagement: 3 } },
+  ];
 }
 
 
